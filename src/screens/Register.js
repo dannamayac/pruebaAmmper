@@ -17,6 +17,12 @@ function Register() {
     e.preventDefault();
     setError(null);
 
+    // Validación de la contraseña
+    if (password.length < 8) {
+      setError('La contraseña debe contener al menos 8 caracteres.');
+      return;
+    }
+
     try {
       const data = await register(name, email, password);
       if (data) {
@@ -27,7 +33,7 @@ function Register() {
         }, 3000);
       }
     } catch (error) {
-      setError('Error en el registro. Por favor, verifica los datos ingresados.');
+      setError('Error en el registro. El correo ya se encuentra registrado.');
     }
   };
 

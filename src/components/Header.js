@@ -20,8 +20,6 @@ function Header({ title }) {
       <nav className={`header-nav ${isMenuOpen ? 'open' : ''}`}>
         <div className="options-nav">
           <Link to="/banks" className="nav-link" onClick={toggleMenu}>Bancos</Link>
-          <Link to="/accounts" className="nav-link" onClick={toggleMenu}>Cuentas</Link>
-          <Link to="/transactions" className="nav-link" onClick={toggleMenu}>Transacciones</Link>
         </div>
       </nav>
       <FaBars className="menu-icon" onClick={toggleMenu} />

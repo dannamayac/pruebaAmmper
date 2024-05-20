@@ -1,0 +1,139 @@
+/* src/styles/Login.css */
+
+.login-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-image: url('../assets/background.jpg');
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light);
+  padding: 1rem;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  margin: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  color: var(--darkBlue);
+  margin-bottom: 1rem;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.input-group {
+  margin: 0.5rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-group label {
+  font-size: 1rem;
+  color: var(--darkBlue);
+  margin-bottom: 0.25rem;
+  width: 100%;
+  text-align: center;
+}
+
+.input-group input {
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  width: 90%;
+  box-shadow: inset 5px 5px 10px #ccc, inset -5px -5px 10px #fff;
+  text-indent: 5px;
+  outline: none;
+}
+
+.login-button {
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--lightBlue);
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  box-shadow: 5px 5px 10px #ccc, -5px -5px 10px #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: var(--darkBlue);
+}
+
+.register-link {
+  margin-top: 0.5rem;
+}
+
+.register-link p {
+  font-size: 0.9rem;
+  color: var(--darkBlue);
+}
+
+.register-link a {
+  color: var(--lightBlue);
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: #ff4f4f;
+  background-color: rgba(255, 79, 79, 0.1);
+  border: 1px solid #ff4f4f;
+  padding: 0.5rem;
+  border-radius: 10px;
+  width: 90%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .content {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content {
+    max-width: 350px;
+  }
+
+  .input-group input {
+    width: 85%;
+  }
+}
